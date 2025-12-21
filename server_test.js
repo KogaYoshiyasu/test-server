@@ -31,7 +31,7 @@ app.post('/upload', upload.single('image_file'), (req, res) => {
         const dateStr = new Date().toLocaleString(); // 保存した日時
 
         const imageUrl = req.file 
-            ? `http://localhost:${PORT}/uploads/${req.file.filename}` 
+            ? `https://test-server-757e.onrender.com/uploads/${req.file.filename}` 
             : (routeHistory.length > 0 ? routeHistory[0].imageUrl : "");
 
         const newEntry = {
@@ -58,4 +58,4 @@ app.delete('/history/:id', (req, res) => {
     res.status(200).json({ message: "Deleted" });
 });
 
-app.listen(PORT, () => console.log(`Server started: https://test-ble3.onrender.com/`));
+app.listen(PORT, () => console.log(`Server started: https://test-server-757e.onrender.com`));
