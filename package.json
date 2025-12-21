@@ -1,0 +1,25 @@
+{
+  "name": "render",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server_test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KogaYoshiyasu/test-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KogaYoshiyasu/test-server/issues"
+  },
+  "homepage": "https://github.com/KogaYoshiyasu/test-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "multer": "^2.0.2"
+  }
+}
