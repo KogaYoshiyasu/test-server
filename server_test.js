@@ -27,7 +27,8 @@ let routeHistory = [];
 // 保存 (POST)
 app.post('/upload', upload.single('image_file'), (req, res) => {
     try {
-        const points = JSON.parse(req.body.route_data);
+        const points = JSON.parse(req.body.points_data);
+        const route = JSON.parse(req.body.route_data);
         const dateStr = new Date().toLocaleString(); // 保存した日時
 
         const imageUrl = req.file 
@@ -38,7 +39,8 @@ app.post('/upload', upload.single('image_file'), (req, res) => {
             id: Date.now(),
             name: dateStr, // 日時を名前にセット
             points: points,
-            imageUrl: imageUrl
+            imageUrl: imageUrl,
+            route: route
         };
 
         routeHistory.unshift(newEntry);
