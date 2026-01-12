@@ -40,7 +40,7 @@ app.post('/upload', upload.single('image_file'), (req, res) => {
         const newEntry = {
             id: Date.now(),
             name: dateStr, // 日時を名前にセット
-            points: points,
+            points: points, //
             imageUrl: imageUrl,
             route: route
         };
@@ -63,3 +63,4 @@ app.delete('/history/:id', (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server started: https://test-server-757e.onrender.com`));
+
