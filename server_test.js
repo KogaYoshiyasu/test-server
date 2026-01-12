@@ -31,8 +31,6 @@ app.post('/upload', upload.single('image_file'), (req, res) => {
         const route = JSON.parse(req.body.route_data);
         const dateStr = new Date().toLocaleString(); // 保存した日時
 
-        console.log(route);
-
         const imageUrl = req.file 
             ? `https://test-server-757e.onrender.com/uploads/${req.file.filename}` 
             : (routeHistory.length > 0 ? routeHistory[0].imageUrl : "");
